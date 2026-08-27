@@ -1,0 +1,12 @@
+# ☠️ O instalador do Deck TEM de sair com LF. Baixado com CRLF, o bash morre
+# com "bad interpreter: /bin/bash^M" e o usuario nao faz ideia do porque.
+*.sh text eol=lf
+
+# E os .bat tem de sair com CRLF, senao o cmd engasga.
+*.bat text eol=crlf
+
+# O patch e' binario: nem pensar em conversao de fim de linha.
+*.xdelta binary
+*.pak binary
+*.hed binary
+*.exe binary
