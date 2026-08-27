@@ -1,6 +1,6 @@
 ====================================================================
   KINGDOM HEARTS HD 2.8 Final Chapter Prologue - Traducao PT-BR
-  versao 1.0
+  versao 1.0.1
 ====================================================================
 
 Traducao nao-oficial para portugues do Brasil dos tres jogos da
@@ -32,6 +32,9 @@ FECHE O JOGO ANTES DE INSTALAR.
 
     Rode com "bash instalar_deck.sh" mesmo, e nao "./instalar_deck.sh":
     o bit de execucao se perde quando o arquivo passa pelo Windows.
+
+    Nao precisa instalar nada antes. O pacote traz o aplicador de
+    patch em Python, e o Deck ja' vem com Python 3.
 
 
 --------------------------------------------------------------------

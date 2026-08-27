@@ -5,10 +5,11 @@
 #   ./instalar_deck.sh /caminho/jogo   aponta a pasta na mão
 #   ./instalar_deck.sh --tirar         volta ao original
 #
-# O SteamOS não traz o xdelta3, e o sistema é somente-leitura, então instalar
-# um pacote ali é chato. Se ele não estiver presente, o script explica o
-# caminho manual: aplicar o patch num PC com Windows e copiar os arquivos
-# prontos para o Deck — que é o método que o LEIA-ME chama de manual.
+# O SteamOS não traz o xdelta3 e tem o sistema somente-leitura, então pedir para
+# instalar um pacote é pedir o que a maioria não vai fazer. Por isso o pacote
+# leva `patch/aplicar_patch.py`, que aplica o patch em Python puro — e o Deck já
+# vem com Python 3. O xdelta3 do sistema é usado quando existe, só porque é
+# ainda mais rápido; nenhum dos dois é obrigatório sozinho.
 
 set -u
 BASE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -79,19 +80,35 @@ if [ "$TIRAR" = "1" ]; then
     exit 0
 fi
 
-if ! command -v xdelta3 >/dev/null 2>&1; then
-    vermelho "  O xdelta3 não está instalado, e sem ele não dá para aplicar o patch aqui."
-    echo
-    echo    "  Duas saídas:"
-    echo    "   1) instale o xdelta3 e rode este script de novo;"
-    echo    "   2) use o método manual: rode o instalar.bat num PC com Windows,"
-    echo    "      copie de lá os arquivos abaixo e ponha nos mesmos lugares aqui."
-    echo    "        Image/SettingMenu.pkg   Image/SettingMenu.hed"
-    echo    "        Image/Launcher28.pkg    Image/Launcher28.hed"
-    echo    "        Image/dt/kh3d_first.pkg Image/dt/kh3d_first.hed"
-    echo    "        KINGDOM HEARTS 0.2 Birth by Sleep/Content/Paks/TresGame-WindowsNoEditor_1_P.pak"
-    exit 1
+# Como aplicar o patch: o xdelta3 do sistema, se houver, senão o Python que
+# vem no pacote. O Deck tem Python 3 de fábrica, então na prática sempre há um.
+PY=""
+if command -v xdelta3 >/dev/null 2>&1; then
+    MODO="xdelta3"
+else
+    for cand in python3 python; do
+        if command -v "$cand" >/dev/null 2>&1 && "$cand" -c 'import sys;sys.exit(0 if sys.version_info[0]==3 else 1)' 2>/dev/null; then
+            PY="$cand"; break
+        fi
+    done
+    if [ -z "$PY" ]; then
+        vermelho "  Não achei nem o xdelta3 nem o Python 3 — preciso de um dos dois."
+        echo
+        echo    "  O Steam Deck vem com Python 3 de fábrica; se você chegou aqui, é um"
+        echo    "  caso fora do comum. Saídas:"
+        echo    "   1) instale o python3 ou o xdelta3 e rode este script de novo;"
+        echo    "   2) rode o instalar.bat num PC com Windows e copie de lá estes"
+        echo    "      arquivos, para os mesmos lugares aqui:"
+        echo    "        Image/SettingMenu.pkg   Image/SettingMenu.hed"
+        echo    "        Image/Launcher28.pkg    Image/Launcher28.hed"
+        echo    "        Image/dt/kh3d_first.pkg Image/dt/kh3d_first.hed"
+        echo    "        KINGDOM HEARTS 0.2 Birth by Sleep/Content/Paks/TresGame-WindowsNoEditor_1_P.pak"
+        exit 1
+    fi
+    MODO="python"
 fi
+echo "  Aplicando o patch com: $MODO"
+echo
 
 amarelo "  Guardando os originais..."
 for par in "Image:SettingMenu" "Image:Launcher28" "Image/dt:kh3d_first"; do
@@ -109,9 +126,19 @@ echo
 for par in "Image:SettingMenu" "Image:Launcher28" "Image/dt:kh3d_first"; do
     sub="${par%%:*}"; nome="${par##*:}"
     amarelo "  $nome.pkg ..."
-    if ! xdelta3 -d -f -s "$JOGO/$sub/$nome.pkg.original" \
-                 "$PATCHDIR/$nome.pkg.xdelta" "$JOGO/$sub/$nome.pkg.novo"; then
-        vermelho "  falhou em $nome"; exit 1
+    if [ "$MODO" = "xdelta3" ]; then
+        ok=$(xdelta3 -d -f -s "$JOGO/$sub/$nome.pkg.original" \
+                     "$PATCHDIR/$nome.pkg.xdelta" "$JOGO/$sub/$nome.pkg.novo" \
+             && echo sim)
+    else
+        ok=$("$PY" "$PATCHDIR/aplicar_patch.py" "$JOGO/$sub/$nome.pkg.original" \
+                   "$PATCHDIR/$nome.pkg.xdelta" "$JOGO/$sub/$nome.pkg.novo" \
+             >/dev/null && echo sim)
+    fi
+    if [ "$ok" != "sim" ]; then
+        vermelho "  falhou em $nome"
+        rm -f "$JOGO/$sub/$nome.pkg.novo"
+        exit 1
     fi
     mv -f "$JOGO/$sub/$nome.pkg.novo" "$JOGO/$sub/$nome.pkg"
     cp -f "$PATCHDIR/$nome.hed" "$JOGO/$sub/$nome.hed"

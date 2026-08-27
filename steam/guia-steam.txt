@@ -222,9 +222,10 @@ e o jogo já abre nele.
 
 [b]Dá conquista normalmente?[/b] Sim. Nada relacionado a conquistas é tocado.
 
-[b]Funciona no Steam Deck?[/b] Sim, e há instalador próprio. O SteamOS não traz
-a ferramenta que aplica o patch; se ela não estiver instalada, o script avisa e
-explica o outro caminho.
+[b]Funciona no Steam Deck?[/b] Sim, e há instalador próprio. [b]Não é preciso
+instalar nada antes[/b]: o SteamOS não traz a ferramenta que aplica o patch, e
+tem o sistema somente-leitura, então o pacote leva um aplicador em Python puro —
+e o Deck já vem com Python.
 
 [b]Funciona na Epic?[/b] Não foi testado. O instalador confere o tamanho de cada
 arquivo e recusa o que não reconhecer, então não há risco em tentar — só falta

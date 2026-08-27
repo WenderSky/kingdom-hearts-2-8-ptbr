@@ -5,7 +5,7 @@
 <p align="center">
   <img alt="Idioma" src="https://img.shields.io/badge/idioma-Portugu%C3%AAs%20(BR)-009c3b">
   <img alt="Plataforma" src="https://img.shields.io/badge/plataforma-PC%20%2B%20Steam%20Deck-1b2838">
-  <img alt="Versão" src="https://img.shields.io/badge/vers%C3%A3o-1.0-c41020">
+  <img alt="Versão" src="https://img.shields.io/badge/vers%C3%A3o-1.0.1-c41020">
   <img alt="Cobertura" src="https://img.shields.io/badge/cobertura-100%25-brightgreen">
   <img alt="Jogos" src="https://img.shields.io/badge/jogos-3%20de%203-blueviolet">
   <img alt="Uso" src="https://img.shields.io/badge/uso-n%C3%A3o--comercial-important">
@@ -80,7 +80,7 @@ A régua foi: **traduz o que descreve, mantém o que é nome**.
 
 ## 💾 Instalação
 
-> **Requisitos:** o jogo instalado pela **Steam**. Não precisa de Python, nem de mexer em Proton, variável de ambiente ou opção de inicialização.
+> **Requisitos:** só o jogo instalado pela **Steam**. Não precisa instalar ferramenta nenhuma, nem mexer em Proton, variável de ambiente ou opção de inicialização — o pacote já traz tudo o que usa.
 >
 > **Feche o jogo antes de instalar.**
 
@@ -124,7 +124,7 @@ Se preferir não rodar script nenhum:
 
 > 💡 Rode com `bash instalar_deck.sh` mesmo, e não `./instalar_deck.sh`: o bit de execução se perde quando o arquivo passa pelo Windows.
 >
-> ℹ️ O SteamOS não traz o `xdelta3`. Se ele não estiver instalado, o script avisa e explica o caminho manual — aplicar o patch num PC com Windows e copiar os arquivos prontos para o Deck.
+> ✅ **Não precisa instalar nada antes.** O SteamOS não traz o `xdelta3` e tem o sistema somente-leitura, então o pacote leva o aplicador de patch em **Python puro** — e o Deck já vem com Python 3. Se o `xdelta3` estiver instalado, ele é usado por ser um pouco mais rápido; nenhum dos dois é obrigatório.
 
 ### ↩️ Para desinstalar
 
@@ -144,6 +144,8 @@ Se preferir não rodar script nenhum:
 | `TresGame-WindowsNoEditor_1_P.pak` | `KINGDOM HEARTS 0.2...\Content\Paks\` | o KINGDOM HEARTS 0.2 *(arquivo novo, não substitui nada)* |
 
 Os `.pkg` são grandes demais para caber num repositório, então o que se distribui é o **patch binário** de cada um — 27 KB, 74 KB e 4,9 MB. O instalador reconstrói o arquivo a partir do seu próprio original, o que também garante que **a versão do seu jogo é a esperada**: se o tamanho não bater, ele para e avisa em vez de estragar a instalação.
+
+O patch é aplicado pelo `xdelta3.exe` que vem no pacote ou, se ele faltar, pelo **`aplicar_patch.py`**, que faz o mesmo trabalho em Python puro e sem dependência nenhuma além da biblioteca padrão. É o que dispensa instalar qualquer coisa no Steam Deck. Os dois caminhos foram testados e produzem **exatamente o mesmo arquivo**, conferido por md5.
 
 ---
 

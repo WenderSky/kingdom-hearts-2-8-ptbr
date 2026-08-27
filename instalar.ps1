@@ -12,6 +12,29 @@ $ErrorActionPreference = "Stop"
 $Base = Split-Path -Parent $MyInvocation.MyCommand.Path
 $Patch = Join-Path $Base "patch"
 $Xdelta = Join-Path $Patch "xdelta3.exe"
+$Aplicador = Join-Path $Patch "aplicar_patch.py"
+
+function Achar-Python {
+    # reserva para quando o xdelta3.exe faltar ou o antivirus barrar
+    foreach ($c in @("python", "python3", "py")) {
+        $exe = (Get-Command $c -ErrorAction SilentlyContinue)
+        if (-not $exe) { continue }
+        $v = & $c -c "import sys; print(sys.version_info[0])" 2>$null
+        if ($v -eq "3") { return $c }
+    }
+    return $null
+}
+
+function Aplicar-Patch($origem, $delta, $saida) {
+    if (Test-Path $Xdelta) {
+        & $Xdelta -d -f -s $origem $delta $saida
+        return ($LASTEXITCODE -eq 0)
+    }
+    $py = Achar-Python
+    if (-not $py) { return $false }
+    & $py $Aplicador $origem $delta $saida | Out-Null
+    return ($LASTEXITCODE -eq 0)
+}
 
 # nome -> (subpasta dentro do jogo, tamanho do original, tamanho depois)
 $Alvos = @(
@@ -98,8 +121,15 @@ foreach ($a in $Alvos) {
     $delta = Join-Path $Patch "$($a.Nome).pkg.xdelta"
     $tmp = "$pkg.novo"
     Escrever "  $($a.Nome).pkg ..." "Yellow"
-    & $Xdelta -d -f -s $bak $delta $tmp
-    if ($LASTEXITCODE -ne 0) { Escrever "  falhou em $($a.Nome)" "Red"; exit 1 }
+    if (-not (Aplicar-Patch $bak $delta $tmp)) {
+        Escrever "  Falhou em $($a.Nome)." "Red"
+        if (-not (Test-Path $Xdelta)) {
+            Escrever "  O xdelta3.exe nao esta' na pasta patch e nao achei Python 3." "Yellow"
+            Escrever "  Baixe o pacote de novo, ou instale o Python (python.org)." "Yellow"
+        }
+        if (Test-Path $tmp) { Remove-Item $tmp -Force }
+        exit 1
+    }
     Move-Item $tmp $pkg -Force
     Copy-Item (Join-Path $Patch "$($a.Nome).hed") (Join-Path $Jogo "$($a.Sub)\$($a.Nome).hed") -Force
 }
