@@ -1,0 +1,110 @@
+====================================================================
+  KINGDOM HEARTS HD 2.8 Final Chapter Prologue - Traducao PT-BR
+  versao 1.0
+====================================================================
+
+Traducao nao-oficial para portugues do Brasil dos tres jogos da
+coletanea: Dream Drop Distance HD, 0.2 Birth by Sleep e Back Cover.
+
+A traducao ocupa o slot do idioma Ingles. Como o jogo ja' abre em
+ingles por padrao, nao e' preciso mexer em opcao nenhuma.
+
+FECHE O JOGO ANTES DE INSTALAR.
+
+
+--------------------------------------------------------------------
+  1) INSTALACAO AUTOMATICA  (recomendada)
+--------------------------------------------------------------------
+
+  WINDOWS
+    De duplo-clique em  instalar.bat
+
+    Ele acha a pasta do jogo sozinho, em qualquer biblioteca da
+    Steam, inclusive em outro disco. Se nao achar, ele mostra como
+    apontar o caminho na mao.
+
+  STEAM DECK
+    Modo Area de Trabalho, copie esta pasta para o Deck e no
+    Konsole rode:
+
+        cd ~/Downloads/KH28_PTBR
+        bash instalar_deck.sh
+
+    Rode com "bash instalar_deck.sh" mesmo, e nao "./instalar_deck.sh":
+    o bit de execucao se perde quando o arquivo passa pelo Windows.
+
+
+--------------------------------------------------------------------
+  2) INSTALACAO MANUAL  (copiar e colar)
+--------------------------------------------------------------------
+
+Se preferir nao rodar script nenhum. Abra a pasta do jogo pela
+Steam (botao direito no jogo > Gerenciar > Explorar arquivos locais).
+
+  a) Faca uma copia destes arquivos, com o nome terminando
+     em .original :
+
+        Image\SettingMenu.pkg
+        Image\Launcher28.pkg
+        Image\dt\kh3d_first.pkg
+
+  b) Abra o Prompt de Comando dentro da pasta "patch" e rode, uma
+     linha por vez, trocando CAMINHO pela pasta do seu jogo:
+
+     xdelta3.exe -d -f -s "CAMINHO\Image\SettingMenu.pkg.original" SettingMenu.pkg.xdelta "CAMINHO\Image\SettingMenu.pkg"
+     xdelta3.exe -d -f -s "CAMINHO\Image\Launcher28.pkg.original" Launcher28.pkg.xdelta "CAMINHO\Image\Launcher28.pkg"
+     xdelta3.exe -d -f -s "CAMINHO\Image\dt\kh3d_first.pkg.original" kh3d_first.pkg.xdelta "CAMINHO\Image\dt\kh3d_first.pkg"
+
+  c) Copie por cima, da pasta "patch":
+
+        SettingMenu.hed  ->  Image\
+        Launcher28.hed   ->  Image\
+        kh3d_first.hed   ->  Image\dt\
+
+  d) Copie tambem:
+
+        TresGame-WindowsNoEditor_1_P.pak
+          ->  KINGDOM HEARTS 0.2 Birth by Sleep\Content\Paks\
+
+
+--------------------------------------------------------------------
+  PARA DESINSTALAR
+--------------------------------------------------------------------
+
+  Windows     : duplo-clique em  desinstalar.bat
+  Steam Deck  : bash instalar_deck.sh --tirar
+  Sempre da'  : Steam > botao direito no jogo > Propriedades >
+                Arquivos instalados > Verificar integridade
+
+O instalador guarda uma copia de cada arquivo original antes de
+tocar nele, com o nome <arquivo>.original ao lado. E' de la' que o
+desinstalador tira tudo de volta.
+
+
+--------------------------------------------------------------------
+  AVISO
+--------------------------------------------------------------------
+
+Traducao amadora, feita por um fa, sem fins lucrativos e sem
+qualquer afiliacao com a Square Enix ou a Disney. Pode conter erros.
+
+Pode baixar, usar e compartilhar de graca. Pode repostar, desde que
+credite o autor e mantenha este aviso.
+
+E' PROIBIDO vender, cobrar ou monetizar esta traducao.
+E' PROIBIDO distribuir os arquivos do jogo - compartilhe apenas o
+patch, nunca os .pkg originais.
+
+KINGDOM HEARTS e' marca registrada da Square Enix Co., Ltd., com
+personagens da Disney. Este projeto nao e' oficial e nao substitui a
+compra do jogo.
+
+
+--------------------------------------------------------------------
+  CREDITOS
+--------------------------------------------------------------------
+
+  Traducao, engenharia reversa e ferramentas:  Wender_sky (Steam)
+  Desempacotamento dos .pkg:  OpenKH
+
+                "Que o seu coracao seja a sua chave-guia."

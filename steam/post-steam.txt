@@ -1,0 +1,87 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  TEXTOS CURTOS PARA DIVULGAR — KINGDOM HEARTS HD 2.8 PT-BR                   ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+Todos já prontos para copiar e colar. Escolha pelo lugar onde vai postar.
+
+
+───────────────────────────────────────────────────────────────────────────────
+ DISCUSSÕES DA STEAM  (fórum do jogo)
+───────────────────────────────────────────────────────────────────────────────
+
+TÍTULO
+  [PT-BR] Tradução completa dos 3 jogos — grátis, PC e Steam Deck
+
+CORPO
+  Terminei a tradução para português do Brasil da coletânea inteira: Dream Drop
+  Distance HD, 0.2 Birth by Sleep e Back Cover.
+
+  São 10.193 trechos de texto — história, diálogos, o Diário, as Crônicas, o
+  bestiário de Dream Eaters, menus e as legendas do filme. Também redesenhei os
+  balões de ajuda do Dream Drop Distance, que são imagens e normalmente ficam em
+  inglês.
+
+  Não precisa configurar nada: a tradução ocupa o slot do Inglês, e como o jogo
+  já abre nele, é instalar e jogar. Funciona no PC e no Steam Deck, tem
+  instalador automático e desinstalador, e faz backup dos arquivos originais.
+
+  É de graça:
+  https://github.com/WenderSky/kingdom-hearts-2-8-ptbr/releases/latest
+
+  Guia com o passo a passo e prints: [link do guia depois de publicar]
+
+  Tradução amadora, feita por fã, sem qualquer afiliação com a Square Enix ou a
+  Disney. Pode ter erros — se achar algum, manda print que eu corrijo.
+
+
+───────────────────────────────────────────────────────────────────────────────
+ CURTO  (comentário, resposta a "tem em português?")
+───────────────────────────────────────────────────────────────────────────────
+
+  Tem sim, uma tradução de fã dos três jogos da coletânea, de graça e com
+  instalador para PC e Steam Deck:
+  https://github.com/WenderSky/kingdom-hearts-2-8-ptbr/releases/latest
+
+
+───────────────────────────────────────────────────────────────────────────────
+ REDDIT / FÓRUM  (r/KingdomHearts, r/jogatina)
+───────────────────────────────────────────────────────────────────────────────
+
+TÍTULO
+  Traduzi a coletânea KINGDOM HEARTS HD 2.8 inteira para português do Brasil
+
+CORPO
+  Os três jogos do 2.8 nunca saíram em português, então traduzi: Dream Drop
+  Distance HD, 0.2 Birth by Sleep e o filme Back Cover. 10.193 trechos no total.
+
+  Um detalhe de que me orgulho: as telas de ajuda do Dream Drop Distance
+  explicam o jogo com balõezinhos amarelos, e o texto deles está pintado na
+  imagem, não é legenda. Em vez de deixar em inglês, remontei a fonte da própria
+  arte letra por letra, a partir dos balões que já existiam no jogo em três
+  idiomas — e onde a frase em português não cabia, estiquei o balão em vez de
+  encolher a letra.
+
+  Grátis, funciona no PC e no Steam Deck, instalador automático com backup e
+  desinstalador. Não precisa mexer em opção nenhuma.
+
+  https://github.com/WenderSky/kingdom-hearts-2-8-ptbr
+
+  É trabalho amador e pode ter erros — se acharem algum, mandem print.
+
+
+───────────────────────────────────────────────────────────────────────────────
+ UMA LINHA  (X/Twitter, status)
+───────────────────────────────────────────────────────────────────────────────
+
+  KINGDOM HEARTS HD 2.8 inteiro em PT-BR: os 3 jogos, 10.193 trechos e até os
+  balões de ajuda, que são imagens. Grátis, PC e Steam Deck.
+  https://github.com/WenderSky/kingdom-hearts-2-8-ptbr
+
+
+───────────────────────────────────────────────────────────────────────────────
+ DESCRIÇÃO DO REPOSITÓRIO  (o campo "About" do GitHub)
+───────────────────────────────────────────────────────────────────────────────
+
+  Traducao PT-BR completa (amadora, pode conter erros) da coletanea KINGDOM
+  HEARTS HD 2.8 Final Chapter Prologue - Steam e Steam Deck. Os 3 jogos, 10.193
+  trechos, mais os baloes de ajuda redesenhados. Uso nao-comercial.

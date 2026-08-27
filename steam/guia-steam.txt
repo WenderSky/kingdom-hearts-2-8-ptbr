@@ -1,0 +1,261 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  GUIA DA COMUNIDADE STEAM — KINGDOM HEARTS HD 2.8 PT-BR                      ║
+║  Copie cada bloco na seção correspondente do editor de guias.                ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+COMO CRIAR O GUIA
+  Steam > Biblioteca > KINGDOM HEARTS HD 2.8 > Comunidade > Guias >
+  Criar um guia
+  O editor tem "Adicionar seção" no rodapé. Cada SEÇÃO abaixo vira uma dessas.
+  O índice do guia se monta sozinho a partir dos títulos das seções.
+
+IMAGEM DE MARCA (a Steam pede uma quadrada, mínimo 195x195)
+  A melhor opção é uma captura da tela inicial da coletânea já em português,
+  recortada em quadrado no logotipo — dá para ler "Tradução - Wender_sky"
+  embaixo dele mesmo quando a Steam encolhe para 195x195.
+
+COMO INSERIR OS PRINTS
+  1. No jogo, tire as capturas com F12.
+  2. Steam > Exibir > Capturas de tela > Enviar para a Steam (deixe públicas).
+  3. Abra a captura no navegador, clique com o direito na imagem >
+     "Copiar endereço da imagem".
+  4. Cole dentro de [img]ENDEREÇO[/img] onde estiver marcado no texto.
+
+  Onde cada print faz mais efeito está indicado com  ►►  ao longo do guia.
+
+
+═══════════════════════════════════════════════════════════════════════════════
+ TÍTULO DO GUIA
+═══════════════════════════════════════════════════════════════════════════════
+
+Tradução PT-BR completa — os 3 jogos (PC e Steam Deck)
+
+
+═══════════════════════════════════════════════════════════════════════════════
+ DESCRIÇÃO CURTA  (o resumo que aparece na listagem de guias)
+═══════════════════════════════════════════════════════════════════════════════
+
+A coletânea 2.8 inteira em português do Brasil: Dream Drop Distance, 0.2 Birth
+by Sleep e Back Cover, 10.193 trechos e até os balões de ajuda, que são
+imagens. Gratuito, funciona no PC e no Steam Deck, e não precisa configurar
+nada.
+
+
+═══════════════════════════════════════════════════════════════════════════════
+ SEÇÃO 1 — O que é isto
+═══════════════════════════════════════════════════════════════════════════════
+
+O [b]2.8[/b] é a coletânea que fecha a ponte para o Kingdom Hearts III: o
+[b]Dream Drop Distance HD[/b], com Sora e Riku no Exame de Maestria; o
+[b]0.2 Birth by Sleep — A fragmentary passage[/b], com a Aqua presa no Reino
+da Escuridão; e o filme [b]χ Back Cover[/b], que conta o que houve com os
+Videntes.
+
+Nenhum dos três nunca saiu em português. Esta é uma tradução de fã que leva
+[b]os três[/b] para o português do Brasil — de ponta a ponta.
+
+[b]10.193 trechos de texto[/b], mais o Diário, as Crônicas, o bestiário de
+Dream Eaters, os menus, as legendas do filme e [b]até os balões de ajuda, que
+são imagens[/b] e normalmente ficam em inglês.
+
+►► print da tela inicial da coletânea em português, com o crédito no logotipo
+
+[b]Não precisa configurar nada.[/b] A tradução ocupa o slot do idioma Inglês, e
+como o jogo já abre em inglês por padrão: instalou, abriu, está em português.
+
+[b]É de graça[/b] e não substitui a compra do jogo.
+
+
+═══════════════════════════════════════════════════════════════════════════════
+ SEÇÃO 2 — O que está traduzido
+═══════════════════════════════════════════════════════════════════════════════
+
+[table]
+[tr][th]Conteúdo[/th][th]Trechos[/th][/tr]
+[tr][td]KINGDOM HEARTS Dream Drop Distance HD[/td][td]6.609[/td][/tr]
+[tr][td]KINGDOM HEARTS 0.2 Birth by Sleep[/td][td]2.227[/td][/tr]
+[tr][td]KINGDOM HEARTS χ Back Cover + Diário[/td][td]896[/td][/tr]
+[tr][td]Menu de configurações da coletânea[/td][td]461[/td][/tr]
+[tr][td][b]Total[/b][/td][td][b]10.193[/b][/td][/tr]
+[/table]
+
+Isso inclui:
+
+[list]
+[*] A [b]história completa dos três jogos[/b], do prólogo ao segredo final
+[*] Todos os [b]diálogos[/b], incluindo as falas opcionais e as dos Spirits
+[*] O [b]bestiário de Dream Eaters[/b], as receitas, os comandos e as habilidades
+[*] O [b]Diário[/b] e as [b]Crônicas[/b] — os resumos de história de toda a série
+[*] [b]Menus, salvamento, loja, mapa[/b] e mensagens de sistema
+[*] As [b]legendas do Back Cover[/b] e do Theater
+[*] Os [b]balões de ajuda[/b] do Dream Drop Distance
+[/list]
+
+►► print do Diário ou das Crônicas em português
+
+São três motores diferentes num pacote só, cada um guardando o texto do seu
+jeito. O texto passou por verificação automática em todos eles — ícones de
+botão, etiquetas de cor e de quebra, variáveis e largura de linha — e fechou
+com [b]zero divergências[/b].
+
+
+═══════════════════════════════════════════════════════════════════════════════
+ SEÇÃO 3 — Os balões de ajuda
+═══════════════════════════════════════════════════════════════════════════════
+
+As telas de Ajuda do Dream Drop Distance explicam o jogo com balõezinhos
+amarelos — e o texto deles [b]não é legenda: está pintado na imagem[/b]. Por
+isso costumam ficar em inglês nas traduções de fã.
+
+Aqui não: os [b]20 balões[/b] que têm texto foram redesenhados.
+
+►► print de uma tela de ajuda com os balões em português (o ponto de salvamento
+   é o mais bonito)
+
+A letra não é uma fonte "parecida". É a [b]fonte da própria arte[/b], remontada
+letra por letra a partir dos balões que já existiam no jogo. Dá para provar:
+apagar o inglês e reescrever o mesmo inglês devolve a imagem praticamente
+igual à original.
+
+E onde a frase em português não cabia, [b]o balão é que foi esticado[/b] —
+nenhuma letra precisou encolher para caber.
+
+
+═══════════════════════════════════════════════════════════════════════════════
+ SEÇÃO 4 — Instalação no PC (automática)
+═══════════════════════════════════════════════════════════════════════════════
+
+[b]Feche o jogo antes de instalar.[/b]
+
+[olist]
+[*] Baixe o pacote na página de Releases do projeto (link na última seção).
+[*] [b]Descompacte[/b] o .zip.
+[*] Dê [b]duplo-clique[/b] em [b]instalar.bat[/b].
+[*] Ele acha a pasta do jogo sozinho, em qualquer biblioteca da Steam,
+    [b]inclusive em outro disco[/b]. Se não achar, ele diz como apontar o
+    caminho.
+[*] Pronto. Abra o jogo — já está em português.
+[/olist]
+
+O instalador [b]guarda uma cópia de cada arquivo original[/b] antes de tocar
+nele, com o nome [i]<arquivo>.original[/i] ao lado. Para voltar atrás, é só
+rodar [b]desinstalar.bat[/b].
+
+Ele também confere o tamanho dos arquivos antes de escrever qualquer coisa: se
+o jogo tiver sido atualizado ou já tiver outra modificação, ele [b]para e
+avisa[/b] em vez de estragar a instalação.
+
+
+═══════════════════════════════════════════════════════════════════════════════
+ SEÇÃO 5 — Instalação no PC (manual, copiando e colando)
+═══════════════════════════════════════════════════════════════════════════════
+
+Se você prefere não rodar script nenhum, dá para fazer na mão.
+
+Abra a pasta do jogo pela Steam: botão direito no jogo > [b]Gerenciar[/b] >
+[b]Explorar arquivos locais[/b].
+
+[olist]
+[*] Faça uma cópia destes três arquivos, com o nome terminando em
+    [b].original[/b]:
+[code]Image\SettingMenu.pkg
+Image\Launcher28.pkg
+Image\dt\kh3d_first.pkg[/code]
+[*] Abra o Prompt de Comando dentro da pasta [b]patch[/b] e rode, uma linha por
+    vez, trocando CAMINHO pela pasta do seu jogo:
+[code]xdelta3.exe -d -f -s "CAMINHO\Image\SettingMenu.pkg.original" SettingMenu.pkg.xdelta "CAMINHO\Image\SettingMenu.pkg"
+xdelta3.exe -d -f -s "CAMINHO\Image\Launcher28.pkg.original" Launcher28.pkg.xdelta "CAMINHO\Image\Launcher28.pkg"
+xdelta3.exe -d -f -s "CAMINHO\Image\dt\kh3d_first.pkg.original" kh3d_first.pkg.xdelta "CAMINHO\Image\dt\kh3d_first.pkg"[/code]
+[*] Copie por cima, da pasta [b]patch[/b]:
+[code]SettingMenu.hed  ->  Image\
+Launcher28.hed   ->  Image\
+kh3d_first.hed   ->  Image\dt\[/code]
+[*] E por fim:
+[code]TresGame-WindowsNoEditor_1_P.pak
+  ->  KINGDOM HEARTS 0.2 Birth by Sleep\Content\Paks\[/code]
+[/olist]
+
+
+═══════════════════════════════════════════════════════════════════════════════
+ SEÇÃO 6 — Instalação no Steam Deck
+═══════════════════════════════════════════════════════════════════════════════
+
+[olist]
+[*] [b]Feche o jogo[/b] e vá para o [b]Modo Área de Trabalho[/b].
+[*] Copie a pasta descompactada para o Deck (ex.: ~/Downloads). Pelo cabo USB é
+    o mais rápido.
+[*] Abra o [b]Konsole[/b] e rode:
+[code]cd ~/Downloads/KH28_PTBR
+bash instalar_deck.sh[/code]
+[*] Ele detecta o jogo no SSD [b]ou no cartão SD[/b].
+[*] Volte ao [b]Modo Jogo[/b] e abra — já está em português.
+[/olist]
+
+[b]Rode com "bash instalar_deck.sh" mesmo[/b], e não "./instalar_deck.sh": o bit
+de execução se perde quando o arquivo passa pelo Windows.
+
+O SteamOS não traz o xdelta3, que é a ferramenta que aplica o patch. Se ele não
+estiver instalado, o script avisa e explica o outro caminho: rodar o
+instalar.bat num PC com Windows e copiar de lá os arquivos prontos para o Deck.
+
+
+═══════════════════════════════════════════════════════════════════════════════
+ SEÇÃO 7 — Como desinstalar
+═══════════════════════════════════════════════════════════════════════════════
+
+[list]
+[*] [b]Windows:[/b] duplo-clique em [b]desinstalar.bat[/b]
+[*] [b]Steam Deck:[/b] [i]bash instalar_deck.sh --tirar[/i]
+[*] [b]Sempre funciona:[/b] Steam > botão direito no jogo > Propriedades >
+    Arquivos instalados > [b]Verificar integridade[/b]
+[/list]
+
+Nada da tradução fica para trás: os arquivos originais voltam do backup que o
+instalador guardou, e o único arquivo novo que o patch acrescenta é removido.
+
+
+═══════════════════════════════════════════════════════════════════════════════
+ SEÇÃO 8 — Perguntas rápidas
+═══════════════════════════════════════════════════════════════════════════════
+
+[b]Preciso mudar o idioma nas opções?[/b]
+Não. A tradução ocupa o slot do Inglês e o jogo já abre nele.
+
+[b]Funciona com meus saves antigos?[/b]
+Funciona. O patch não toca em save nenhum.
+
+[b]Dá problema com as conquistas?[/b]
+Não. Nada do que o patch muda tem a ver com conquistas.
+
+[b]E se a Steam atualizar o jogo?[/b]
+A atualização substitui os arquivos e a tradução sai. É só rodar o instalador
+de novo.
+
+[b]Tem erro de tradução?[/b]
+Pode ter. É trabalho amador e foi conferido do melhor jeito possível, mas são
+10.193 trechos. Se achar algum erro, mande um print — dá para corrigir numa
+próxima versão.
+
+[b]Posso repostar?[/b]
+Pode, de graça e creditando o autor. O que não pode é vender, cobrar ou
+monetizar, nem distribuir os arquivos do jogo — compartilhe só o patch.
+
+
+═══════════════════════════════════════════════════════════════════════════════
+ SEÇÃO 9 — Download e créditos
+═══════════════════════════════════════════════════════════════════════════════
+
+[b]Download:[/b]
+https://github.com/WenderSky/kingdom-hearts-2-8-ptbr/releases/latest
+
+Achou um erro de tradução? Abra uma issue com o print:
+https://github.com/WenderSky/kingdom-hearts-2-8-ptbr/issues
+
+[b]Tradução, engenharia reversa e ferramentas:[/b] Wender_sky
+[b]Desempacotamento dos .pkg:[/b] OpenKH
+
+Tradução de fã, sem fins lucrativos e sem qualquer afiliação com a Square Enix
+ou a Disney. KINGDOM HEARTS é marca registrada da Square Enix Co., Ltd., com
+personagens da Disney.
+
+[i]"Que o seu coração seja a sua chave-guia."[/i]
