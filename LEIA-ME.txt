@@ -1,6 +1,6 @@
 ====================================================================
   KINGDOM HEARTS HD 2.8 Final Chapter Prologue - Traducao PT-BR
-  versao 1.0.1
+  versao 1.1
 ====================================================================
 
 Traducao nao-oficial para portugues do Brasil dos tres jogos da
@@ -50,6 +50,7 @@ Steam (botao direito no jogo > Gerenciar > Explorar arquivos locais).
         Image\SettingMenu.pkg
         Image\Launcher28.pkg
         Image\dt\kh3d_first.pkg
+        Image\dt\kh3d_fourth.pkg
 
   b) Abra o Prompt de Comando dentro da pasta "patch" e rode, uma
      linha por vez, trocando CAMINHO pela pasta do seu jogo:
@@ -57,12 +58,14 @@ Steam (botao direito no jogo > Gerenciar > Explorar arquivos locais).
      xdelta3.exe -d -f -s "CAMINHO\Image\SettingMenu.pkg.original" SettingMenu.pkg.xdelta "CAMINHO\Image\SettingMenu.pkg"
      xdelta3.exe -d -f -s "CAMINHO\Image\Launcher28.pkg.original" Launcher28.pkg.xdelta "CAMINHO\Image\Launcher28.pkg"
      xdelta3.exe -d -f -s "CAMINHO\Image\dt\kh3d_first.pkg.original" kh3d_first.pkg.xdelta "CAMINHO\Image\dt\kh3d_first.pkg"
+     xdelta3.exe -d -f -s "CAMINHO\Image\dt\kh3d_fourth.pkg.original" kh3d_fourth.pkg.xdelta "CAMINHO\Image\dt\kh3d_fourth.pkg"
 
   c) Copie por cima, da pasta "patch":
 
         SettingMenu.hed  ->  Image\
         Launcher28.hed   ->  Image\
         kh3d_first.hed   ->  Image\dt\
+        kh3d_fourth.hed  ->  Image\dt\
 
   d) Copie tambem:
 

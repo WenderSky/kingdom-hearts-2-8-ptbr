@@ -40,7 +40,8 @@ function Aplicar-Patch($origem, $delta, $saida) {
 $Alvos = @(
     @{ Nome = "SettingMenu"; Sub = "Image";    Antes = 972990192;  Depois = 972991392  },
     @{ Nome = "Launcher28";  Sub = "Image";    Antes = 1819443888; Depois = 1819445232 },
-    @{ Nome = "kh3d_first";  Sub = "Image\dt"; Antes = 2982000752; Depois = 2981977088 }
+    @{ Nome = "kh3d_first";  Sub = "Image\dt"; Antes = 2982000752; Depois = 2981977088 },
+    @{ Nome = "kh3d_fourth"; Sub = "Image\dt"; Antes = 2386041040; Depois = 2386042064 }
 )
 
 function Escrever($texto, $cor = "Gray") { Write-Host $texto -ForegroundColor $cor }

@@ -60,7 +60,7 @@ PAKS="$JOGO/KINGDOM HEARTS 0.2 Birth by Sleep/Content/Paks"
 
 if [ "$TIRAR" = "1" ]; then
     achou=0
-    for par in "Image:SettingMenu" "Image:Launcher28" "Image/dt:kh3d_first"; do
+    for par in "Image:SettingMenu" "Image:Launcher28" "Image/dt:kh3d_first" "Image/dt:kh3d_fourth"; do
         sub="${par%%:*}"; nome="${par##*:}"
         for ext in pkg hed; do
             bak="$JOGO/$sub/$nome.$ext.original"
@@ -102,6 +102,7 @@ else
         echo    "        Image/SettingMenu.pkg   Image/SettingMenu.hed"
         echo    "        Image/Launcher28.pkg    Image/Launcher28.hed"
         echo    "        Image/dt/kh3d_first.pkg Image/dt/kh3d_first.hed"
+        echo    "        Image/dt/kh3d_fourth.pkg Image/dt/kh3d_fourth.hed"
         echo    "        KINGDOM HEARTS 0.2 Birth by Sleep/Content/Paks/TresGame-WindowsNoEditor_1_P.pak"
         exit 1
     fi
@@ -111,7 +112,7 @@ echo "  Aplicando o patch com: $MODO"
 echo
 
 amarelo "  Guardando os originais..."
-for par in "Image:SettingMenu" "Image:Launcher28" "Image/dt:kh3d_first"; do
+for par in "Image:SettingMenu" "Image:Launcher28" "Image/dt:kh3d_first" "Image/dt:kh3d_fourth"; do
     sub="${par%%:*}"; nome="${par##*:}"
     for ext in pkg hed; do
         arq="$JOGO/$sub/$nome.$ext"
@@ -123,7 +124,7 @@ done
 echo "  Backups em <arquivo>.original, ao lado de cada um."
 echo
 
-for par in "Image:SettingMenu" "Image:Launcher28" "Image/dt:kh3d_first"; do
+for par in "Image:SettingMenu" "Image:Launcher28" "Image/dt:kh3d_first" "Image/dt:kh3d_fourth"; do
     sub="${par%%:*}"; nome="${par##*:}"
     amarelo "  $nome.pkg ..."
     if [ "$MODO" = "xdelta3" ]; then

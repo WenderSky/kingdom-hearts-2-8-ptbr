@@ -9,7 +9,8 @@ $Base = Split-Path -Parent $MyInvocation.MyCommand.Path
 $Alvos = @(
     @{ Nome = "SettingMenu"; Sub = "Image"    },
     @{ Nome = "Launcher28";  Sub = "Image"    },
-    @{ Nome = "kh3d_first";  Sub = "Image\dt" }
+    @{ Nome = "kh3d_first";  Sub = "Image\dt" },
+    @{ Nome = "kh3d_fourth"; Sub = "Image\dt" }
 )
 
 function Escrever($texto, $cor = "Gray") { Write-Host $texto -ForegroundColor $cor }

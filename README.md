@@ -5,7 +5,7 @@
 <p align="center">
   <img alt="Idioma" src="https://img.shields.io/badge/idioma-Portugu%C3%AAs%20(BR)-009c3b">
   <img alt="Plataforma" src="https://img.shields.io/badge/plataforma-PC%20%2B%20Steam%20Deck-1b2838">
-  <img alt="Versão" src="https://img.shields.io/badge/vers%C3%A3o-1.0.1-c41020">
+  <img alt="Versão" src="https://img.shields.io/badge/vers%C3%A3o-1.1-c41020">
   <img alt="Cobertura" src="https://img.shields.io/badge/cobertura-100%25-brightgreen">
   <img alt="Jogos" src="https://img.shields.io/badge/jogos-3%20de%203-blueviolet">
   <img alt="Uso" src="https://img.shields.io/badge/uso-n%C3%A3o--comercial-important">
@@ -106,8 +106,9 @@ Se preferir não rodar script nenhum:
    xdelta3.exe -d -f -s "CAMINHO\Image\SettingMenu.pkg.original" SettingMenu.pkg.xdelta "CAMINHO\Image\SettingMenu.pkg"
    xdelta3.exe -d -f -s "CAMINHO\Image\Launcher28.pkg.original"  Launcher28.pkg.xdelta  "CAMINHO\Image\Launcher28.pkg"
    xdelta3.exe -d -f -s "CAMINHO\Image\dt\kh3d_first.pkg.original" kh3d_first.pkg.xdelta "CAMINHO\Image\dt\kh3d_first.pkg"
+   xdelta3.exe -d -f -s "CAMINHO\Image\dt\kh3d_fourth.pkg.original" kh3d_fourth.pkg.xdelta "CAMINHO\Image\dt\kh3d_fourth.pkg"
    ```
-4. Copie por cima os três `.hed` da pasta `patch`, cada um para a mesma pasta do `.pkg` de mesmo nome.
+4. Copie por cima os quatro `.hed` da pasta `patch`, cada um para a mesma pasta do `.pkg` de mesmo nome.
 5. Copie `TresGame-WindowsNoEditor_1_P.pak` para `KINGDOM HEARTS 0.2 Birth by Sleep\Content\Paks\`.
 
 ### 🎮 Steam Deck
@@ -139,11 +140,12 @@ Se preferir não rodar script nenhum:
 | Arquivo | Onde | O que leva |
 |---|---|---|
 | `kh3d_first.pkg` / `.hed` | `Image\dt\` | o texto e as imagens do Dream Drop Distance |
+| `kh3d_fourth.pkg` / `.hed` | `Image\dt\` | os diálogos de seis mundos do DDD (La Cité des Cloches, The Grid, Prankster's Paradise, Country of the Musketeers, Symphony of Sorcery, The World That Never Was) |
 | `Launcher28.pkg` / `.hed` | `Image\` | o Back Cover, o Diário e a tela inicial da coletânea |
 | `SettingMenu.pkg` / `.hed` | `Image\` | o menu de configurações |
 | `TresGame-WindowsNoEditor_1_P.pak` | `KINGDOM HEARTS 0.2...\Content\Paks\` | o KINGDOM HEARTS 0.2 *(arquivo novo, não substitui nada)* |
 
-Os `.pkg` são grandes demais para caber num repositório, então o que se distribui é o **patch binário** de cada um — 27 KB, 74 KB e 4,9 MB. O instalador reconstrói o arquivo a partir do seu próprio original, o que também garante que **a versão do seu jogo é a esperada**: se o tamanho não bater, ele para e avisa em vez de estragar a instalação.
+Os `.pkg` são grandes demais para caber num repositório, então o que se distribui é o **patch binário** de cada um — 27 KB, 74 KB, 4,9 MB e 77 KB. O instalador reconstrói o arquivo a partir do seu próprio original, o que também garante que **a versão do seu jogo é a esperada**: se o tamanho não bater, ele para e avisa em vez de estragar a instalação.
 
 O patch é aplicado pelo `xdelta3.exe` que vem no pacote ou, se ele faltar, pelo **`aplicar_patch.py`**, que faz o mesmo trabalho em Python puro e sem dependência nenhuma além da biblioteca padrão. É o que dispensa instalar qualquer coisa no Steam Deck. Os dois caminhos foram testados e produzem **exatamente o mesmo arquivo**, conferido por md5.
 
