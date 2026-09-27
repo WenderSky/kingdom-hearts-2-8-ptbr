@@ -5,7 +5,7 @@
 <p align="center">
   <img alt="Idioma" src="https://img.shields.io/badge/idioma-Portugu%C3%AAs%20(BR)-009c3b">
   <img alt="Plataforma" src="https://img.shields.io/badge/plataforma-PC%20%2B%20Steam%20Deck-1b2838">
-  <img alt="Versão" src="https://img.shields.io/badge/vers%C3%A3o-1.1-c41020">
+  <img alt="Versão" src="https://img.shields.io/badge/vers%C3%A3o-1.2-c41020">
   <img alt="Cobertura" src="https://img.shields.io/badge/cobertura-100%25-brightgreen">
   <img alt="Jogos" src="https://img.shields.io/badge/jogos-3%20de%203-blueviolet">
   <img alt="Uso" src="https://img.shields.io/badge/uso-n%C3%A3o--comercial-important">
