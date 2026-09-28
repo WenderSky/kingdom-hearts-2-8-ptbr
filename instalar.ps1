@@ -36,11 +36,22 @@ function Aplicar-Patch($origem, $delta, $saida) {
     return ($LASTEXITCODE -eq 0)
 }
 
-# nome -> (subpasta dentro do jogo, tamanho do original, tamanho depois)
+# nome -> (subpasta no jogo, tamanho de fabrica, tamanho DESTA versao)
+#
+# ☠️ **Esta tabela envelhece a cada versao, e envelhecer em silencio e' o
+# perigo.** Ate' a v1.2 ela carregava o `Depois` da v1.1, e como o instalador
+# decidia so' por tamanho, ele olhava um jogo na v1.1 e dizia **"a traducao
+# ja' esta' instalada, nada a fazer"** -- recusando-se a aplicar a versao que
+# ele proprio trazia. Quem estivesse de fabrica instalava e, ao rodar de novo,
+# ouvia "tamanho que eu nao reconheco".
+#
+# Por isso `Depois` agora e' sempre o tamanho do pacote **desta** versao, e
+# tamanho que nao e' nem fabrica nem esta versao passou a significar
+# "traducao antiga instalada, atualize" em vez de erro.
 $Alvos = @(
     @{ Nome = "SettingMenu"; Sub = "Image";    Antes = 972990192;  Depois = 972991392  },
     @{ Nome = "Launcher28";  Sub = "Image";    Antes = 1819443888; Depois = 1819445232 },
-    @{ Nome = "kh3d_first";  Sub = "Image\dt"; Antes = 2982000752; Depois = 2981977088 },
+    @{ Nome = "kh3d_first";  Sub = "Image\dt"; Antes = 2982000752; Depois = 2981977120 },
     @{ Nome = "kh3d_fourth"; Sub = "Image\dt"; Antes = 2386041040; Depois = 2386042064 }
 )
 
@@ -84,21 +95,33 @@ Escrever "  Jogo: $Jogo"
 Escrever ""
 
 # --- confere antes de escrever qualquer coisa -------------------------------
+#
+# O patch e' sempre aplicado sobre o **original de fabrica**, nunca sobre o
+# arquivo que esta' la'. Entao o que decide nao e' "o que esta' instalado?",
+# e sim **"eu tenho de onde partir?"** -- o `.original` ao lado, ou o proprio
+# arquivo ainda de fabrica. Com isso, atualizar de uma versao antiga funciona
+# igual a instalar do zero.
 $jaInstalado = $true
+$semOrigem = @()
 foreach ($a in $Alvos) {
     $pkg = Join-Path $Jogo "$($a.Sub)\$($a.Nome).pkg"
+    $bak = "$pkg.original"
     $tam = (Get-Item $pkg).Length
-    if ($tam -eq $a.Antes) { $jaInstalado = $false }
-    elseif ($tam -ne $a.Depois) {
-        Escrever "  $($a.Nome).pkg tem um tamanho que eu nao reconheco ($tam bytes)." "Red"
-        Escrever "  Ou o jogo foi atualizado, ou ja' tem outra modificacao instalada." "Yellow"
-        Escrever "  Verifique os arquivos pela Steam e tente de novo." "Yellow"
-        exit 1
-    }
+    if ($tam -ne $a.Depois) { $jaInstalado = $false }
+
+    $temOrigem = ($tam -eq $a.Antes) -or
+                 ((Test-Path $bak) -and ((Get-Item $bak).Length -eq $a.Antes))
+    if (-not $temOrigem) { $semOrigem += $a.Nome }
 }
 if ($jaInstalado) {
-    Escrever "  A traducao ja' esta' instalada. Nada a fazer." "Green"
+    Escrever "  Esta versao da traducao ja' esta' instalada. Nada a fazer." "Green"
     exit 0
+}
+if ($semOrigem.Count) {
+    Escrever "  Nao tenho o arquivo de fabrica de: $($semOrigem -join ', ')" "Red"
+    Escrever "  Ou o jogo foi atualizado, ou ja' tem outra modificacao instalada." "Yellow"
+    Escrever "  Verifique os arquivos pela Steam e tente de novo." "Yellow"
+    exit 1
 }
 
 # --- backup, sempre antes ---------------------------------------------------

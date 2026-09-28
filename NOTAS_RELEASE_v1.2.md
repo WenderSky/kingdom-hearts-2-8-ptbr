@@ -39,12 +39,23 @@ ocorrências; aqui estava **Castelo do Disney**, em 7 lugares. Agora batem.
 
 `SettingMenu` e `Launcher28` **não mudam** em relação à 1.1.
 
+## 🔧 E o instalador, que não deixava atualizar
+
+Até a 1.1 o instalador decidia **só pelo tamanho do arquivo**: ele sabia
+distinguir "de fábrica" de "traduzido", mas não *qual versão* estava
+instalada. Olhando um jogo na 1.1, ele dizia **"a tradução já está instalada,
+nada a fazer"** — e se recusava a aplicar a versão que ele próprio trazia.
+
+Agora a pergunta que ele faz é outra. Como o patch é sempre reconstruído a
+partir do **original de fábrica** (o `.original` que ele mesmo guardou), o que
+importa não é o que está instalado, e sim **se há de onde partir**. Com isso,
+atualizar de qualquer versão anterior funciona igual a instalar do zero.
+
 ## ⬆️ Atualizando
 
 Instale por cima, como sempre. O instalador reconstrói cada `.pkg` a partir do
 **original do próprio jogo**, então ele confere a versão de graça: um patch só
 aplica sobre o byte exato de que saiu.
 
-Se você já tem a 1.1 instalada e o instalador reclamar, use **Verificar
-integridade dos arquivos** na Steam antes — ele devolve os originais e o patch
-entra limpo.
+Se você já tem a 1.1 instalada, é só rodar por cima: o instalador reconhece e
+atualiza no lugar.
